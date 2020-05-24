@@ -1,0 +1,24 @@
+entity Recipe {
+prepTime Integer
+cookTime Integer
+name String
+}
+
+entity Ingredient {
+
+}
+entity RecipeIngredient {
+quantity Quantity
+}
+
+entity Quantity {
+
+}
+
+relationship OneToOne {
+Ingredient to RecipeIngredient{ingredient}
+}
+
+relationship ManyToOne {
+RecipeIngredient to Recipe{ingredients}
+}
